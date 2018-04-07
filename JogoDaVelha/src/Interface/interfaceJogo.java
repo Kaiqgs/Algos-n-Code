@@ -3,12 +3,12 @@ package Interface;
 import Backend.MotorJogoDaVelha;
 import javax.swing.*;
 
-public class interfaceJogo extends javax.swing.JFrame {
+public class InterfaceJogo extends javax.swing.JFrame {
 
     MotorJogoDaVelha motor;
     JButton botoesJogo[];
 
-    public interfaceJogo()
+    public InterfaceJogo()
     {
         initComponents();
         
@@ -273,8 +273,7 @@ public class interfaceJogo extends javax.swing.JFrame {
                             .addComponent(placarP1Label)
                             .addComponent(placarP2Label))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(restartBotao)
-                        .addContainerGap(59, Short.MAX_VALUE))
+                        .addComponent(restartBotao))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(botao0)
@@ -290,8 +289,8 @@ public class interfaceJogo extends javax.swing.JFrame {
                             .addComponent(botao6)
                             .addComponent(botao7)
                             .addComponent(botao8)
-                            .addComponent(infoBotao))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(infoBotao))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -457,27 +456,28 @@ public class interfaceJogo extends javax.swing.JFrame {
         }
         catch (ClassNotFoundException ex)
         {
-            java.util.logging.Logger.getLogger(interfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (InstantiationException ex)
         {
-            java.util.logging.Logger.getLogger(interfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (IllegalAccessException ex)
         {
-            java.util.logging.Logger.getLogger(interfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
-            java.util.logging.Logger.getLogger(interfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfaceJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run()
             {
-                new interfaceJogo().setVisible(true);
+                new InterfaceJogo().setVisible(true);
             }
         });
     }
