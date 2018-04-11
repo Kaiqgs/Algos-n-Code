@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1523404549 source:f:\users\kai\documents\facul\listatelefonica\listatelefonica\listasequencialestatica.c
+	"ListaSequencialEstatica.h"
+
+1523404511 f:\users\kai\documents\facul\listatelefonica\listatelefonica\listasequencialestatica.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1523404367 source:f:\users\kai\documents\facul\listatelefonica\listatelefonica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	"ListaSequencialEstatica.h"
+
+1523404549 source:f:\users\kai\documents\facul\listatelefonica\listasequencialestatica.c
+	"ListaSequencialEstatica.h"
+
+1523404511 f:\users\kai\documents\facul\listatelefonica\listasequencialestatica.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
