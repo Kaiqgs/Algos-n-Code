@@ -22,12 +22,12 @@ int main()
 
     exibir(&listaTelefonica, "Lista antes da exclusao");
 
-    printf("\n\n-- Elemento encontrado por Busca Sequencial [pos = %d]",buscaSequencial(&listaTelefonica, *paraBuscaSequencial));
-    printf("\n-- Elemento encontrado por Busca Sequencial [pos = %d]",buscaSequencial(&listaTelefonica, *paraBuscaBinaria));
-    printf("\n-- Elemento encontrado por Busca Binaria [pos = %d]",buscaBinaria(&listaTelefonica, *paraBuscaSequencial));
-    printf("\n-- Elemento encontrado por Busca Binaria [pos = %d]",buscaBinaria(&listaTelefonica, *paraBuscaBinaria));
-    printf("\n-- Exclusao tentara ser feita no registro \"%s\" [pos = %d]",paraBuscaBinaria->nome, exclusao(&listaTelefonica, *paraBuscaBinaria));
-    printf("\n-- Exclusao tentara ser feita no registro \"%s\" [pos = %d]\n",paraBuscaSequencial->nome, exclusao(&listaTelefonica, *paraBuscaSequencial));
+    printf("\n\n-- Busca Sequencial: elemento = \"%s\" [pos = %d]",paraBuscaSequencial->nome,buscaSequencial(&listaTelefonica, *paraBuscaSequencial));
+    printf("\n-- Sequencial: elemento = \"%s\" [pos = %d]",paraBuscaBinaria->nome,buscaSequencial(&listaTelefonica, *paraBuscaBinaria));
+    printf("\n-- Binaria: elemento = \"%s\" [pos = %d]",paraBuscaSequencial->nome,buscaBinaria(&listaTelefonica, *paraBuscaSequencial));
+    printf("\n-- Busca Binaria: elemento = \"%s\" [pos = %d]",paraBuscaBinaria->nome,buscaBinaria(&listaTelefonica, *paraBuscaBinaria));
+    printf("\n-- Exclusao: elemento = \"%s\" [pos = %d]",paraBuscaBinaria->nome, exclusao(&listaTelefonica, *paraBuscaBinaria));
+    printf("\n-- Exclusao: elemento = \"%s\" [pos = %d]\n",paraBuscaSequencial->nome, exclusao(&listaTelefonica, *paraBuscaSequencial));
 
     exibir(&listaTelefonica, "Lista depois da exclusao");
     getchar();//Previnir tela de fechar ao rodar .exe
