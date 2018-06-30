@@ -2,12 +2,9 @@
 
 A  windows forms .NET implementation of a Finite State Machine and Finite State Automata, used to recognize patterns within data.
 
-## Getting Started
-
-All the variable names and comments were written in Portuguese.
-
 ### Prerequisites
 
+All the variable names and comments were written in Portuguese.
 The software is built for windows, although it can be ported to MAC OS. 
 
 ### Installing
