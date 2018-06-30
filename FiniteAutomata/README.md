@@ -11,7 +11,7 @@ The software is built for windows, although it can be ported to MAC OS.
 
 In order to execute the
 program, you can simply run the .exe in the Debug folder.
-So, given you are in the main folder
+So, given you are in the main folder:
 
 ```
 "FiniteAutomata/bin/Debug/FiniteAutomata.exe"
