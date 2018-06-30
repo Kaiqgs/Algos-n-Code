@@ -19,7 +19,7 @@ So, given you are in the main folder
 ```
 "FiniteAutomata/bin/Debug/FiniteAutomata.exe"
 ```
-This should be the result:
+This should be the result:\n
 ![What your window should look like](Example.png?raw=true "Example")
 
 ## Built With
