@@ -20,7 +20,7 @@ So, given you are in the main folder
 "FiniteAutomata/bin/Debug/FiniteAutomata.exe"
 ```
 This should be the result:
-![Alt text](example.png?raw=true "Example")
+![What your window should look like](Example.png?raw=true "Example")
 
 ## Built With
 
@@ -29,7 +29,7 @@ This should be the result:
 
 ## Authors
 
-* **Kaique Alan Gualter dos Santos** - [PurpleBooth](https://github.com/Kaiqgs)
+* **Kaique Alan Gualter dos Santos** - [Kaiqgs](https://github.com/Kaiqgs)
 
 ## License
 
