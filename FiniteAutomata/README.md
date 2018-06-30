@@ -1,6 +1,6 @@
 # Finite State Machine and Automata
 
-A  windows forms .NET implementation of a Finite State Machine and Finite State Automata, both used to recognize patterns within data.
+A  windows forms .NET implementation of a Finite State Machine and Finite State Automata, used to recognize patterns within data.
 
 ## Getting Started
 
