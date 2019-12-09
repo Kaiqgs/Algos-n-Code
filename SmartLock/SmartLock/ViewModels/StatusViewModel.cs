@@ -25,13 +25,10 @@ namespace SmartLock.ViewModels
                 OnPropertyChanged(nameof(IconCode));
             }
         }
-        private DoorConnection DoorConnection;
 
         public StatusViewModel()
         {
             ToggleDoorCommand = new Command(ToggleDoor, () => !IsBusy);
-            DoorConnection = new DoorConnection();
-
             Status = new Status(DoorState.Unknown);
             GetStatus();
             IsBusy = false;
@@ -42,30 +39,32 @@ namespace SmartLock.ViewModels
         {
 
             Console.WriteLine("Getting door status");
+            var doorconn = new DoorConnection();
             IsBusy = true;
             var res = await new DoorPermissions().RequestMissingPermissions();
             if (!res) await DoorLanguageResources.Instance.NeedLocationMessage();
-            if (!DoorConnection.CanConnect) await DoorLanguageResources.Instance.NeedBluetoothMessage();
-            if (!res || !DoorConnection.CanConnect) { IsBusy = false; return; }
-            try { await DoorConnection.ConnectAsync(); }
+            if (!doorconn.CanConnect) await DoorLanguageResources.Instance.NeedBluetoothMessage();
+            if (!res || !doorconn.CanConnect) { IsBusy = false; return; }
+            try { await doorconn.ConnectAsync(); }
             catch { IsBusy = false; return; }
-            Status = await DoorConnection.GetStatusAsync();
+            Status = await doorconn.GetStatusAsync();
             IsBusy = false;
         }
 
         public async void ToggleDoor()
         {
             Console.WriteLine("Toggling door");
+            var doorconn = new DoorConnection();
             IsBusy = true;
             var res = await new DoorPermissions().RequestMissingPermissions();
             if (!res) await DoorLanguageResources.Instance.NeedLocationMessage();
-            if (!DoorConnection.CanConnect) await DoorLanguageResources.Instance.NeedBluetoothMessage();
-            if (!res || !DoorConnection.CanConnect) { IsBusy = false; return; }
-            try { await DoorConnection.ConnectAsync(); }
+            if (!doorconn.CanConnect) await DoorLanguageResources.Instance.NeedBluetoothMessage();
+            if (!res || !doorconn.CanConnect) { IsBusy = false; return; }
+            try { await doorconn.ConnectAsync(); }
             catch { IsBusy = false; return; }
 
-            var result = await DoorConnection.SetStatusAsync(Status.Toggle());
-            if (!result) Status = await DoorConnection.GetStatusAsync();
+            var result = await doorconn.SetStatusAsync(Status.Toggle());
+            if (!result) Status = await doorconn.GetStatusAsync();
             else Status = Status.Toggle();
             IsBusy = false;
         }
