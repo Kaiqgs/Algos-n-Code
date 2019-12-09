@@ -1,0 +1,10 @@
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\bin\Debug\TesteTad.exe.config
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\bin\Debug\TesteTad.exe
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\bin\Debug\TesteTad.pdb
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\bin\Debug\LinAlg.dll
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\bin\Debug\LinAlg.pdb
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\obj\Debug\TesteTad.csprojAssemblyReference.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\obj\Debug\TesteTad.csproj.CoreCompileInputs.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\obj\Debug\TesteTad.csproj.CopyComplete
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\obj\Debug\TesteTad.exe
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\TesteTad\TesteTad\obj\Debug\TesteTad.pdb

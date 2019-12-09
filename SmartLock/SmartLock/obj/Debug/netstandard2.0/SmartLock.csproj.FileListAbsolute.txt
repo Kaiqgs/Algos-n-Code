@@ -1,0 +1,16 @@
+C:\Users\Kags\source\repos\SmartLock\SmartLock\bin\Debug\netstandard2.0\SmartLock.deps.json
+C:\Users\Kags\source\repos\SmartLock\SmartLock\bin\Debug\netstandard2.0\SmartLock.dll
+C:\Users\Kags\source\repos\SmartLock\SmartLock\bin\Debug\netstandard2.0\ref\SmartLock.dll
+C:\Users\Kags\source\repos\SmartLock\SmartLock\bin\Debug\netstandard2.0\SmartLock.pdb
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\SmartLock.csprojAssemblyReference.cache
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\SmartLock.AssemblyInfoInputs.cache
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\SmartLock.AssemblyInfo.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\SmartLock.dll
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\ref\SmartLock.dll
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\SmartLock.pdb
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\Views\StatusPage.xaml.g.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Kags\source\repos\SmartLock\SmartLock\obj\Debug\netstandard2.0\XamlC.stamp

@@ -1,0 +1,79 @@
+{% extends 'management_base.html' %}
+
+<!-- Main title -->
+{% block main_title %}
+Histórico de Serviços
+{% endblock %}
+
+<!-- Data -->
+{% block main_table %}
+{% if current_user.services %}
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">Nome Médico</th>
+      <th scope="col">Nome Pet</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Data</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Apagar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for service in current_user.services %}
+    <tr>
+      <td class="align-middle">{{ service.veterinarian_name }}</th>
+      <td class="align-middle">{{ service.pet_name }}</td>
+      <td class="align-middle">{{ service.price }}</td>
+      <td class="align-middle">{{ service.date }}</td>
+      <td class="align-middle">{{ service.description }}</td>
+
+      <td>
+        <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+        <form action="{{url_for('remove',obj_name='services',idx=loop.index-1) }}" target="dummyframe" method="POST" class=delete-movie onsubmit="setTimeout(function(){window.location.reload();},0)">
+          <input type=submit value="☒"  class="btn btn-link align-middle" style="font-size:30px;padding:0px;">
+        </form>
+      </td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="container text-center">
+  <h4>Histórico não existente</h4>
+</div>
+{% endif %}
+{% endblock %}
+
+
+
+<!-- Modal add Veterinarian Form -->
+{% block modal_form %}
+{% if current_user.veterinarians and current_user.pets %}
+{{form.csrf_token}}
+<div class="form-group">
+  <label for="vetNameInput">Nome do Profissional</label>
+  {{form.veterinarian_name(class='form-control custom-select', id='vetNameInput')}}
+</div>
+<div class="form-group">
+  <label for="petNameInput">Nome do Pet</label>
+  {{form.pet_name(class='form-control custom-select', id='petNameInput')}}
+</div>
+<div class="form-group">
+  <label for="priceInput">Preço do serviço</label>
+  {{form.price(type='number', step='0.01', class='form-control', id='priceInput', placeholder='Preço final')}}
+</div>
+<div class="form-group">
+  <label for="descriptionInput">Descrição do que foi feito</label>
+  {{form.description(maxlength='80', style='resize: none;',class='form-control', id='descriptionInput', placeholder='Descrição do que foi feito')}}
+</div>
+{% else %}
+
+<div>
+<h4>Opa...</h4>
+<p>Para continuar, precisa ter cadastrado pets e veterinários!</p>
+</div>
+
+{% endif %}
+{% endblock %}

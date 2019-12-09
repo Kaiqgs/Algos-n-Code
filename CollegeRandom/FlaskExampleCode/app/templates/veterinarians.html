@@ -1,0 +1,70 @@
+{% extends 'management_base.html' %}
+
+<!-- Main title -->
+{% block main_title %}
+Manutenção dos Veterinários
+{% endblock %}
+
+<!-- Data -->
+{% block main_table %}
+{% if current_user.veterinarians %}
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Apagar</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    {% for veterinarian in current_user.veterinarians %}
+    <tr>
+      <td class="align-middle">{{ veterinarian.name }}</th>
+      <td class="align-middle">{{ veterinarian.email }}</td>
+      <td class="align-middle">{{ veterinarian.age }}</td>
+      <td class="align-middle">
+        <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+        <form action="{{url_for('remove',obj_name='veterinarians',idx=loop.index-1) }}" target="dummyframe" method="POST" class=delete-movie onsubmit="setTimeout(function(){window.location.reload();},0)">
+          <input type=submit value="☒"  class="btn btn-link align-middle" style="font-size:30px;padding:0px;">
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="container text-center">
+  <h4>Veterinários não existentes</h4>
+</div>
+{% endif %}
+{% endblock %}
+
+<!-- Modal ad Veterinarian Form -->
+{% block modal_form %}
+{{form.csrf_token}}
+<div class="form-group">
+  <label for="vetNameInput">Nome do Médico(a)</label>
+  {{form.name(type='text', class='form-control', id='vetNameInput', placeholder='Nome')}}
+</div>
+<div class="form-group">
+  <label for="vetEmailInput">Email do Médico(a)</label>
+  {{form.email(type='email', class='form-control', id='vetEmailInput', placeholder='Email')}}
+</div>
+<div class="form-group">
+  <label for="vetAgeInput">Idade do Médico(a)</label>
+  {{form.age(type='number', class='form-control', id='vetAgeInput', placeholder='Idade')}}
+</div>
+<div class="form-group">
+  <label for="vetGenderInput">Sexo do Médico(a)</label>
+  <div>
+    <tr>
+      {% for subfield in form.gender %}
+      <td> {{ subfield }} </td>
+      <td> {{ subfield.label }} </td>
+      {% endfor %}
+    </tr>
+  </div>
+
+</div>
+{% endblock %}

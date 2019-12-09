@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1556650042 source:c:\users\cc04735125990\documents\interp\interpreter\interpreter.c
+	"interpreter.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1556657254 c:\users\cc04735125990\documents\interp\interpreter\interpreter.h
+	"lookuptable.h"
+
+1556657254 c:\users\cc04735125990\documents\interp\interpreter\lookuptable.h
+	"util.h"
+
+1556657254 c:\users\cc04735125990\documents\interp\interpreter\util.h
+	<string.h>
+
+1556649486 source:c:\users\cc04735125990\documents\interp\interpreter\lookuptable.c
+	"lookuptable.h"
+
+1556660829 source:f:\software dev\facul\compiladores\interpreter\interpreter.c
+	"interpreter.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1556660831 f:\software dev\facul\compiladores\interpreter\interpreter.h
+	"lookuptable.h"
+
+1556660831 f:\software dev\facul\compiladores\interpreter\lookuptable.h
+	"util.h"
+
+1556660831 f:\software dev\facul\compiladores\interpreter\util.h
+	<string.h>
+
+1556660831 source:f:\software dev\facul\compiladores\interpreter\lookuptable.c
+	"lookuptable.h"
+
+1556660976 source:f:\software dev\facul\compiladores\interpreter\main.c
+	<stdio.h>
+	<string.h>
+	"interpreter.h"
+
+1556660831 source:f:\software dev\facul\compiladores\interpreter\util.c
+	"util.h"
+	<stdio.h>
+

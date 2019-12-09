@@ -1,0 +1,12 @@
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\bin\Debug\LinAlg.dll
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\bin\Debug\LinAlg.pdb
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\obj\Debug\LinAlg.csprojAssemblyReference.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\obj\Debug\LinAlg.csproj.CoreCompileInputs.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\obj\Debug\LinAlg.dll
+F:\Software Dev\Facul\ProjetoAnaliseAlg\LinAlg\LinAlg\obj\Debug\LinAlg.pdb
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\bin\Debug\LinAlg.dll
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\bin\Debug\LinAlg.pdb
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\obj\Debug\LinAlg.csprojAssemblyReference.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\obj\Debug\LinAlg.csproj.CoreCompileInputs.cache
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\obj\Debug\LinAlg.dll
+F:\Software Dev\Facul\ProjetoAnaliseAlg\TAD\LinAlg\LinAlg\obj\Debug\LinAlg.pdb
