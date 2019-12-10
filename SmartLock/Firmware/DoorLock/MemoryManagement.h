@@ -1,6 +1,5 @@
 #ifndef MEMORY_MANAGEMENT
 #define MEMORY_MANAGEMENT
-#include "Persistence.h"
 #include <EEPROM.h>
 
 #define MEM_OFFSET 32

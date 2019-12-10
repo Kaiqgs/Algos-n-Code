@@ -49,6 +49,7 @@ String _handleSignupEmail(String email){
 
 //Signin;
 String _handleSigninPassword(String password){
+  if(DOOR_UNKNOWN != load_state())return ERR_PROTOCOL;
   String savedpwd = load_password();
   String userpwd = getProtocolData(password);
   Serial.print("SavedPWD= ");
@@ -60,6 +61,7 @@ String _handleSigninPassword(String password){
 }
 
 String _handleSigninEmail(String email){
+  if(DOOR_UNKNOWN != load_state())return ERR_PROTOCOL;
   String savedemail = load_email();
   String useremail = getProtocolData(email);
   Serial.print("SavedEmail= ");

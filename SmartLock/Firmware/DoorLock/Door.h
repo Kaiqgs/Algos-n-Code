@@ -3,7 +3,7 @@
 #include "Pinnout.h"
 #include "MemoryManagement.h"
 
-#define TIME2OPEN 1250
+#define TIME2OPEN 1000
 #define DEFAULTMOVE 0
 
 #define DOOR_UNKNOWN 0
