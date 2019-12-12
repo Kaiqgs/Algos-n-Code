@@ -4,101 +4,51 @@ import antlr4
 from App.Grammar.PapeteLexer import PapeteLexer
 from App.Grammar.PapeteParser import PapeteParser
 from App.Grammar.PapeteVisitor import PapeteVisitor
+from App.Grammar.PapeteListener import PapeteListener
+from App.PapeteVisitorImpl import PapeteVisitorImpl
+from App.PapeteVisitorImpl import log
+from App.PapetePreprocessor import import_files_now
+parser = None
 
 
-variables = {
-
-}
-
-
-class CustomVisitor(PapeteVisitor):
-    pass
-    # """
-    #     Fatores:
-    # """
-
-    # def visitNumIntFact(self, ctx: PapeteParser.NumIntFactContext):
-    #     node = ctx.NUMINT()
-    #     print("NumInt",node.getText())
-    #     return int(node.getText())
-
-    # def visitNumDoubleFact(self, ctx: PapeteParser.NumDoubleFactContext):
-    #     node: antlr4.TerminalNode = ctx.NUMDOUBLE() 
-    #     return float(node.getText())
-
-    # def visitVarFact(self, ctx: PapeteParser.VarFactContext):
-    #     # Todo: check if logic is correct later on;
-    #     text = ctx.VAR().getText()
-    #     if text in variables:
-    #         return variables[text]
-    #     else:
-    #         raise Exception()
-
-    # """
-    #     Termos:
-    # """
-
-    # def visitMultTerm(self, ctx: PapeteParser.MultTermContext):
-    #     return self.visit(ctx.term()) * self.visit(ctx.expr())
-
-    # def visitDivTerm(self, ctx: PapeteParser.DivTermContext):
-    #     return self.visit(ctx.term()) / self.visit(ctx.fact())
-
-    # def visitRestTerm(self, ctx: PapeteParser.RestTermContext):
-    #     return self.visit(ctx.term()) % self.visit(ctx.fact())
-
-    # # def visitFactTerm() - base implemented;
-
-    # """
-    #     Expressões:
-    # """
-
-    # def visitSumExpr(self, ctx: PapeteParser.SumExprContext):
-    #     return self.visit(ctx.expr()) + self.visit(ctx.term())
-
-    # def visitMinusExpr(self, ctx: PapeteParser.MinusExprContext):
-    #     return self.visit(ctx.expr()) - self.visit(ctx.term())
-
-    # # def visitTermExpr() - base implemented;
-
-    # def visitIntAtr(self, ctx: PapeteParser.IntAtrContext):
-
-    #     print("int:", ctx.VAR())
-    #     #raise NotImplementedError()
-    #     return self.visitChildren(ctx)
-
-    # def visitDoubleAtr(self, ctx: PapeteParser.DoubleAtrContext):
-    #     print("double:", ctx.VAR())
-    #     return self.visitChildren(ctx)
-
-    # def visitAtrLine(self, ctx: PapeteParser.AtrLineContext):
-    #     # #help(ctx.atr())
-    #     # print(dir(ctx.atr()))
-    #     # #self.visitIntAtr(ctx.atr())
-    #     # #self.visitDoubleAtr(ctx.atr())
-    #     return self.visitChildren(ctx)
+class CustomListener(PapeteListener):
+    def enterEveryRule(self, ctx):
+        global parser
+        log(
+            f"text={ctx.getText()} || rule={parser.ruleNames[ctx.getRuleIndex()]}")
 
 
 def main():
     if(len(sys.argv) <= 1):
-        print("Missing input argument...")
+        log("Missing input argument...")
         return
+    global parser
+
     filename = sys.argv[1]
-    input_stream = antlr4.FileStream(filename)
+    # Preprocesses;
+    datastream = import_files_now(filename)
+
+    input_stream = antlr4.InputStream(datastream)
     lexer = PapeteLexer(input_stream)
     stream = antlr4.CommonTokenStream(lexer)
     parser = PapeteParser(stream)
     tree = parser.prog()
 
-    print("Visiting...")
-    print(tree.toStringTree())
-    #print(tree.getRuleIndex())
-    visitor = CustomVisitor()
-    visitor.visit(tree)
-    #walker = antlr4.ParseTreeWalker()
-    #walker.walk(listener, tree)
+    log("Visiting...")
+    # log(tree.toStringTree())
 
-    # print(tree.toStringTree())
+    def visit():
+        visitor = PapeteVisitorImpl()
+        visitor.visit(tree)
+        log(visitor.mhandler)
+
+    def walk():
+        listener = CustomListener()
+        walker = antlr4.ParseTreeWalker()
+        walker.walk(listener, tree)
+
+    # walk()
+    visit()
 
 
 if __name__ == "__main__":

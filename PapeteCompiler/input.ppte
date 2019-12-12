@@ -1,0 +1,29 @@
+int x;
+int y;
+int j = 1;
+double k = 0 + 92 - (1/2);
+bool yes, im, testing, multiple, declarations;
+int valdouble, double valint = 99;
+testing = false;
+
+j = j + 1;
+
+
+if(valdouble < k){
+    int prejuizo = valdouble - (valdouble * 2);
+    int jotaquest = 0-0;
+    print("Perdi aposta");
+}
+else{
+    int recompensa = valdouble * 2;
+    print("Ganhei aposta");
+};
+
+string age = "I am " + read() + " years old";
+string bb = "I'm' checking char inside string";
+
+char a = 'a';
+char k = '0';
+
+
+print("My life sucks");

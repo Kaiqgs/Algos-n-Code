@@ -1,0 +1,58 @@
+! Math library:
+! Written in Papete;
+! By Kaique Alan Gualter dos Santos (2017);
+
+double PI = 3.141592;
+double e = 2.718281;
+double TAU = 6.283185;
+
+! Absolute value;
+func abs(double a){
+    if(a < 0){
+        return a * _1;
+    };
+    return a;
+};
+
+! Simple square function;
+func square(double a){
+    return a * a;
+};
+
+! Multiple type definition;
+func mean3(double a, double b, double c){
+    return (a/3) + (b/3) + (c/3);
+};
+
+! One type, multiple definitions;
+func pow(int value, power){
+    int result = 1;
+    int i = 0;
+    while(i < power){
+        result = result * value;
+        i = i + 1;
+    };
+    return result;
+};
+
+! Recursive factorial;
+! Note: not every type of recursion is allowed;
+func factorial(double x){
+    if(x == 0){
+        return 1;
+    };
+
+    return x * factorial(x-1);
+};
+
+! Area of rectangle;
+func areaRect(double w, h){
+    return w * h;
+};
+
+! Area of circle;
+! Example of global scope being used;
+! PI is global, but r is local;
+func areaCircle(double r){
+    return PI * (r * r);
+};

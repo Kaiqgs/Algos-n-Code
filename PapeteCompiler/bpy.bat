@@ -1,0 +1,1 @@
+python -m App.main %1

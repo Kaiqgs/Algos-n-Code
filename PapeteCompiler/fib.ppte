@@ -1,0 +1,22 @@
+! Sample Fibonacci in Papete Code;
+! Kaique Santos 120176;
+! Bruno Santos 120156;
+
+print("Get nth fibonacci number, type n:");
+int val = read();
+
+func fib(int n){
+    int previous = _1;
+    int result = 1;
+
+    int i = 0;
+    while(i <= n){
+        int sum = result + previous;
+        previous = result;
+        result = sum;
+        i = i + 1;
+    };
+    return result;
+};
+
+print(fib(val));
