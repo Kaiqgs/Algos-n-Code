@@ -6,7 +6,7 @@ import antlr4
 
 
 def log(*msg, **kwargs):
-    return
+    # return
     print(*msg, **kwargs)
 
 
@@ -56,6 +56,8 @@ class PapeteVisitorImpl(PapeteVisitor):
     def visitTypeChar(self, ctx: PapeteParser.TypeCharContext):
         return ctx.CHAR_TYPE().getText()
 
+    def visitTypeFunc(self, ctx: PapeteParser.TypeFuncContext):
+        return ctx.FUNCTOK().getText()
     """
         Operations:
     """
@@ -202,13 +204,14 @@ class PapeteVisitorImpl(PapeteVisitor):
         paramblock, stmt = self.mhandler.getValue(ctx.VAR())
         self.declaration_function_flag = stmt
         decl = self.visit(paramblock)
-        
+
         if(len(decl) > 0):
             # Get arguments;
             argsvals = self.visit(ctx.argsblock())
-            
+
             # Declare arguments;
-            declargsids = [self.visit(declaration) for declaration in decl][0][2]
+            declargsids = [self.visit(declaration)
+                           for declaration in decl][0][2]
 
             self.mhandler.assignVariables(ids_=declargsids, vals=argsvals)
 

@@ -476,3 +476,12 @@ class PapeteListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PapeteParser#TypeFunc.
+    def enterTypeFunc(self, ctx:PapeteParser.TypeFuncContext):
+        pass
+
+    # Exit a parse tree produced by PapeteParser#TypeFunc.
+    def exitTypeFunc(self, ctx:PapeteParser.TypeFuncContext):
+        pass
+
+

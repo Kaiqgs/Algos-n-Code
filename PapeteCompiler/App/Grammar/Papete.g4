@@ -94,6 +94,7 @@ type_:
 	| BOOL_TYPE #TypeBool //Implemented
     | VOID_TYPE #TypeVoid //Implemented
     | CHAR_TYPE #TypeChar //Implemented
+    | FUNCTOK #TypeFunc //Implemented
     ;
 
 

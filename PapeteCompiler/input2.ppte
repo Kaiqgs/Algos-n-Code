@@ -1,8 +1,9 @@
-import "mathlib.ppte"
 
-int x = 10;
-print("square(x)= ",square(x));
-print("Mean:", mean3(10,9,8));
-print("2^10= " + pow(2, 10));
-print("factorial(4)= ", factorial(4));
-print("areaCircle(10)= ", areaCircle(10));
+
+!int x = 10;
+!print("square(x)= ",square(x));
+!print("Mean:", mean3(10,9,8));
+!print("2^10= " + pow(2, 10));
+!print("factorial(4)= ", factorial(4));
+!print("areaCircle(10)= ", areaCircle(10));
+

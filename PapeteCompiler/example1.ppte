@@ -1,0 +1,32 @@
+
+! Inner function example;
+func foo(){
+    func bar(){
+        print("Hello World!");
+    };
+    return bar;
+};
+
+
+! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! Example function return;
+func examp = foo();
+
+
+! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! Example function parameter;
+func getOne(int a, int b, func selector){
+    bool pickA = selector(a, b);
+    if(pickA){
+        return a;
+    }else{
+        return b;
+    };
+};
+
+
+func selector(int a, int b){
+    return a > b;
+};
+
+print("Picking between numbers using custom selector: " + getOne(10, 20, selector));

@@ -269,5 +269,10 @@ class PapeteVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PapeteParser#TypeFunc.
+    def visitTypeFunc(self, ctx:PapeteParser.TypeFuncContext):
+        return self.visitChildren(ctx)
+
+
 
 del PapeteParser
